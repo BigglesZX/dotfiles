@@ -45,7 +45,7 @@ function make-prompt {
     fi
 
     # coloured term with user, host, cwd, git status
-    PS1="${VIRTUALENV_STRING}${GREEN}\u${BLUE}@${GREEN}\h:${BLUE}\w${COLOR_NONE}(${YELLOW}$(git-branch-name)${RED}$(git-dirty)${COLOR_NONE})\$ "
+    PS1="${VIRTUALENV_STRING}${GREEN}\u${BLUE}@${GREEN}\h${COLOR_NONE}:${BLUE}\w${COLOR_NONE}(${YELLOW}$(git-branch-name)${RED}$(git-dirty)${COLOR_NONE})\$ "
     # return to first column
     PS1="\[\033[G\]$PS1"
 }
