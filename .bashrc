@@ -1,3 +1,8 @@
+##
+## Note: this is intentionally incomplete right now
+## I just wanted somewhere to stash a few bash snippets, not a whole file yet
+##
+
 # --- PROMPT ----
 
 # get git branch name
