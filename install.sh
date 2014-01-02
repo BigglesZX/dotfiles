@@ -19,9 +19,9 @@ cd ~
 ln -s dotfiles/.gitconfig .gitconfig
 
 # prompt for git user.name and user.email
-read -p "Please enter your name for git config:" gitname
+read -p "Please enter your name for git config: " gitname
 git config --global user.name "$gitname"
-read -p "Please enter your email for git config:" gitemail
+read -p "Please enter your email for git config: " gitemail
 git config --global user.email $gitemail
 
 echo "Dotfiles setup complete!"
