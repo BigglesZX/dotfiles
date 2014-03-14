@@ -10,6 +10,7 @@ then
 else
     # not found
     echo "hooking up .bashrc..."
+    echo "" >> ~/.bashrc
     echo "# dotfiles bashrc goodies" >> ~/.bashrc
     echo "source `pwd`/.bashrc" >> ~/.bashrc
 fi
