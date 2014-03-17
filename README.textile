@@ -1,0 +1,12 @@
+h1. dotfiles
+
+Beginnings of a dotfiles repo to save some copypasta and head-scratching.
+
+Manually clone into a new machine environment or use the @salt-dev@ states to install. Run @install.sh@ to set up @.bashrc@ and Git integration, etc.
+
+h2. The Functional Four
+
+* https://github.com/BigglesZX/salt-common
+* https://github.com/BigglesZX/salt-dev
+* https://github.com/BigglesZX/dotfiles
+* https://github.com/BigglesZX/Vagrant-template
