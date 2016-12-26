@@ -34,7 +34,7 @@ function make-prompt {
     local WHITE="\[\033[1;37m\]"
     local LIGHT_GRAY="\[\033[0;37m\]"
     local COLOR_NONE="\[\e[0m\]"
-    
+
     # are we in a virtualenv?
     # NOTE this line gets around the problem of virtualenvwrapper not observing PROMPT_COMMAND,
     # we just do the virtualenv prepending ourselves, no problem
@@ -72,3 +72,8 @@ stt_tab   () { setTerminalText 1 $@; }
 stt_title () { setTerminalText 2 $@; }
 
 source "$(dirname "${BASH_SOURCE}")/.aliases"
+
+# --- virtulenvwrapper ---
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
