@@ -15,7 +15,7 @@ function git-dirty {
     st=$(git status 2>/dev/null | tail -n 1)
     if [ -n "$st" ]
     then
-        if [[ $st != "nothing to commit, working tree clean" ]]
+        if [[ $st != *"nothing to commit"* ]]
         then
             echo "*"
         fi
