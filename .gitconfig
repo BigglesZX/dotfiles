@@ -62,4 +62,12 @@
 	merge = refs/heads/master
 
 [push]
-	default = matching
+	default = current
+[user]
+	name = James Tiplady
+	email = biggleszx@biggleszx.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

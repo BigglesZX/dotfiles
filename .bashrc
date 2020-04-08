@@ -15,7 +15,7 @@ function git-dirty {
     st=$(git status 2>/dev/null | tail -n 1)
     if [ -n "$st" ]
     then
-        if [[ $st != "nothing to commit, working tree clean" ]]
+        if [[ $st != *"nothing to commit"* ]]
         then
             echo "*"
         fi
@@ -75,5 +75,5 @@ source "$(dirname "${BASH_SOURCE}")/.aliases"
 
 # --- virtulenvwrapper ---
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export PROJECT_HOME=$HOME/sites
 source /usr/local/bin/virtualenvwrapper.sh
