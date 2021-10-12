@@ -55,6 +55,13 @@ function make-prompt {
     PS1="${VIRTUALENV_STRING}${GREEN}\u${BLUE}@${GREEN}\h${COLOR_NONE}:${BLUE}\w${COLOR_NONE}(${YELLOW}$(git-branch-name)${RED}$(git-dirty)${COLOR_NONE})${CHAR} "
     # return to first column
     PS1="\[\033[G\]$PS1"
+    
+    # activate nvm if .nvmrc present
+    if [[ $PWD == $PREV_PWD ]]; then
+        return
+    fi
+    PREV_PWD=$PWD
+    [[ -f ".nvmrc" ]] && nvm use
 }
 
 PROMPT_COMMAND=make-prompt
